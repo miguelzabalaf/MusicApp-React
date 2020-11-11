@@ -4,4 +4,15 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  &__cover {
+    width: 20%;
+    border-radius: 50%;
+  }
+  &__name {
+    padding: 3rem 1rem 1rem;
+  }
+  &__artist {
+    color: #aaaaaa;
+    font-weight: 400;
+  }
 }

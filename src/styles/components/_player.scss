@@ -6,14 +6,20 @@
   justify-content: space-between;
   &__time-control {
     display: flex;
-    width: 50%;
+    width: 75%;
     &--range {
       width: 100%;
-      padding: 1rem 3rem;
+      padding: 1rem 0rem;
     }
     &--start-time,
     &--end-time {
       padding: 1rem;
+      color: #aaaaaa;
+      width: 55px;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
   }
   &__play-control {
@@ -21,9 +27,30 @@
     justify-content: space-between;
     align-items: center;
     padding: 1rem;
-    width: 30%;
+    width: 65%;
     svg {
       cursor: pointer;
+      transition: all 0.1s;
+    }
+    &--skip-back,
+    &--skip-forward,
+    &--play {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.3s;
+      &:active svg {
+        transform: scale(1.25);
+        opacity: 0.25;
+      }
+      &:hover {
+        background-color: white;
+        filter: brightness(0.95);
+      }
     }
   }
 }
