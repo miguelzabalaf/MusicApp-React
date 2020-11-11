@@ -46,7 +46,7 @@ export const Player = ({ currentSong, isPlaying, setIsPlaying }) => {
       ...songInfo,
       currentTime: event.target.value
     })
-  }
+  };
 
   return (
     <div className="player">
@@ -55,11 +55,10 @@ export const Player = ({ currentSong, isPlaying, setIsPlaying }) => {
         <input 
           onChange={dragRangeHandler}
           value={currentTime} 
-          max={duration} 
+          max={duration || 0} 
           min={0} 
           className="player__time-control--range" 
           type="range"
-          smooth="yes"
         />
         <p className="player__time-control--end-time">{getTime(duration)}</p>
       </div>

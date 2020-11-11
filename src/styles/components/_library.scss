@@ -1,0 +1,45 @@
+.library {
+  background-color: white;
+  padding: 0px 15px 15px 15px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 25rem;
+  height: 100%;
+  -webkit-box-shadow: 5px 5px 50px -5px #cacaca;
+  box-shadow: 5px 5px 50px -5px #cacaca;
+  overflow-y: scroll;
+  &__header {
+    background-color: white;
+    border-bottom: 1px solid rgb(240, 240, 240);
+    position: sticky;
+    padding: 15px 0 5px;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    margin-bottom: 15px;
+    h2 {
+      margin: 0px 0px 15px 15px;
+    }
+  }
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(115, 115, 115, 0.5) transparent;
+}
+
+*::-webkit-scrollbar {
+  width: 5px;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: rgba(115, 115, 115, 0.25);
+  border-radius: 20px;
+  border: transparent;
+}
