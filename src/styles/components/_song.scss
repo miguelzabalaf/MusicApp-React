@@ -14,5 +14,14 @@
   &__artist {
     color: #445b78;
     font-weight: 400;
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .song {
+    &__cover {
+      width: 60%;
+    }
   }
 }

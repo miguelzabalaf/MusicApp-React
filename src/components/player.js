@@ -40,6 +40,7 @@ export const Player = ({ audioRef, currentSong, isPlaying, setIsPlaying, setSong
   const skipTrackHandler = (direction) => {
     const selectCurrentIndex = songs.findIndex((song) => song.id === currentSong.id);
     switch (direction) {
+      // BACK
       case 'skip-back':
         // BACK
         if (selectCurrentIndex === 0) {
@@ -48,6 +49,8 @@ export const Player = ({ audioRef, currentSong, isPlaying, setIsPlaying, setSong
             back: false,
             skip: true,
           })
+          setIsPlaying(true);
+          SONG.play();
         } else {
           setCurrentSong(songs[selectCurrentIndex - 1])
           setPlayerButtons({
@@ -67,6 +70,7 @@ export const Player = ({ audioRef, currentSong, isPlaying, setIsPlaying, setSong
           SONG.play();
         }
         break;
+        // NEXT
         case 'skip-next':
           // NEXT
           if ( songs.length - 1 === selectCurrentIndex) {
@@ -82,6 +86,8 @@ export const Player = ({ audioRef, currentSong, isPlaying, setIsPlaying, setSong
               skip: true,
               back: true
             })
+            setIsPlaying(true);
+            SONG.play();
           }
           if (isPlaying) {
             const playPromise = SONG.play();

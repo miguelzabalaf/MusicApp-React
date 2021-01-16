@@ -8,6 +8,7 @@ import { Nav } from './components/Nav';
 import './styles/app.scss'
 // Data
 import data from './data';
+import { isMobile } from './helpers/isMobile';
 
 const App = () => {
 
@@ -43,7 +44,7 @@ const App = () => {
   };
 
   return (
-    <div className="App">
+    <div className={`App ${ libraryStatus & !isMobile() ? 'library-active' : '' }`}>
       <Nav libraryStatus={libraryStatus} setLibraryStatus={setLibraryStatus} />
       <Song currentSong={currentSong} />
       <Player 

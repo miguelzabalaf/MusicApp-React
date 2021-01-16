@@ -7,7 +7,7 @@ export const Nav = ({ libraryStatus, setLibraryStatus }) => {
   return (
     <nav>
       <div className="container">
-        <h1>Waves</h1>
+        <h1>Daily</h1>
         <button onClick={ () => setLibraryStatus(!libraryStatus) }>
           <FontAwesomeIcon icon={libraryStatus & !isMobile() ? faTimes : faBars} size="2x"/>
         </button>

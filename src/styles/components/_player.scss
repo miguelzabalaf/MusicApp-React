@@ -6,13 +6,22 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  max-width: 700px;
+  max-width: 900px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
   &__time-control {
     display: flex;
     min-width: 100%;
     &--range {
       width: 100%;
       padding: 1rem 0rem;
+      -webkit-appearance: push-button;
+      height: 5px;
+      outline: none;
+      cursor: pointer;
+      margin: 15px;
     }
     &--start-time,
     &--end-time {
@@ -29,7 +38,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem;
+    padding: 1rem 1rem 1.5rem;
     min-width: 50%;
     width: 100%;
     svg {
