@@ -1,12 +1,24 @@
 import React from 'react'
 // Components
 import { LibrarySong } from './LibrarySong'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBars, faTimes} from '@fortawesome/free-solid-svg-icons';
+import { isMobile } from '../helpers/isMobile';
 
-export const Library = ({songs, setCurrentSong}) => {
+export const Library = ({songs, setCurrentSong, audioRef, isPlaying, currentSong, libraryStatus, setLibraryStatus, setIsPlaying}) => {
   return (
-    <div className="library">
+    <div className={`library ${ libraryStatus ? 'active-library' : '' }`}>
       <div className="library__header">
-        <h2>Library</h2>
+        <div className="library__header--title">
+          <h2>Library</h2>
+        </div>
+        {
+          isMobile() &&
+            <div className="library__header--close" onClick={ () => setLibraryStatus(!libraryStatus) }>
+              <FontAwesomeIcon icon={faTimes} size="2x"/>
+            </div>
+
+        }
       </div>
       <div className="library__songs">
         {
@@ -16,7 +28,12 @@ export const Library = ({songs, setCurrentSong}) => {
               song={song}
               setCurrentSong={setCurrentSong} 
               key={song.id} 
-              id={song.id} 
+              audioRef={audioRef}
+              isPlaying={isPlaying}
+              currentSong={currentSong}
+              libraryStatus={libraryStatus}
+              setLibraryStatus={setLibraryStatus}
+              setIsPlaying={setIsPlaying}
             />))
         }
       </div>

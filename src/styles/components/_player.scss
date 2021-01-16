@@ -1,12 +1,15 @@
 .player {
-  min-height: 20vh;
+  min-height: 15vh;
+  padding: 0 30px;
+  margin: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+  max-width: 700px;
   &__time-control {
     display: flex;
-    width: 75%;
+    min-width: 100%;
     &--range {
       width: 100%;
       padding: 1rem 0rem;
@@ -14,7 +17,7 @@
     &--start-time,
     &--end-time {
       padding: 1rem;
-      color: #aaaaaa;
+      color: #445b78;
       width: 55px;
       flex-shrink: 0;
       display: flex;
@@ -27,7 +30,8 @@
     justify-content: space-between;
     align-items: center;
     padding: 1rem;
-    width: 65%;
+    min-width: 50%;
+    width: 100%;
     svg {
       cursor: pointer;
       transition: all 0.1s;
@@ -35,21 +39,52 @@
     &--skip-back,
     &--skip-forward,
     &--play {
-      width: 50px;
-      height: 50px;
+      width: 55px;
+      height: 55px;
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
+      border: none;
+      outline: none;
       cursor: pointer;
-      transition: all 0.3s;
+      transition: all 0.3s ease;
+      background-color: white;
       &:active svg {
         transform: scale(1.25);
         opacity: 0.25;
       }
       &:hover {
-        background-color: white;
+        background-color: rgb(245, 245, 245);
         filter: brightness(0.975);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .player {
+    &__time-control {
+      &--range {
+      }
+      &--start-time,
+      &--end-time {
+      }
+    }
+    &__play-control {
+      svg {
+      }
+      &--skip-back,
+      &--skip-forward,
+      &--play {
+        &:active svg {
+          transform: scale(1.25);
+          opacity: 0.25;
+        }
+        &:hover {
+          background-color: transparent;
+          filter: none;
+        }
       }
     }
   }

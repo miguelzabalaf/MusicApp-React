@@ -9,18 +9,34 @@
   -webkit-box-shadow: 5px 5px 50px -5px #cacaca;
   box-shadow: 5px 5px 50px -5px #cacaca;
   overflow-y: scroll;
+  transform: translateX(-100%);
+  transition: all 0.5s ease;
+  opacity: 0;
   &__header {
     background-color: white;
     border-bottom: 1px solid rgb(240, 240, 240);
     position: sticky;
-    padding: 15px 0 5px;
+    padding: 18px 0 5px;
     top: 0;
     left: 0;
     right: 0;
     z-index: 2;
     margin-bottom: 15px;
-    h2 {
-      margin: 0px 0px 15px 15px;
+    display: flex;
+    justify-content: space-between;
+    &--title {
+      h2 {
+        margin: 0px 0px 10px 15px;
+      }
+    }
+    &--close {
+      display: flex;
+      width: 35px;
+      height: 35px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 10px 0 0;
     }
   }
 }
@@ -42,4 +58,15 @@
   background-color: rgba(115, 115, 115, 0.25);
   border-radius: 20px;
   border: transparent;
+}
+
+.active-library {
+  transform: translateX(0%);
+  opacity: 1;
+}
+
+@media screen and (max-width: 425px) {
+  .library {
+    width: 100vw;
+  }
 }

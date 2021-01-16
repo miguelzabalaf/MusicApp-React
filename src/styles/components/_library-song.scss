@@ -4,7 +4,7 @@
   padding: 15px;
   display: flex;
   margin: 0px 15px;
-  transition: all 0.3s;
+  transition: all 0.5s ease;
   cursor: pointer;
   &:hover {
     filter: brightness(0.975);
@@ -28,14 +28,16 @@
     &--name {
       color: #333;
       font-size: 16px;
+      font-weight: 600;
     }
     &--artist {
-      color: #aaa;
+      color: #445b78;
       font-size: 14px;
+      font-weight: 400;
     }
   }
 }
 
 .songActive {
-  background-color: rgba(0, 117, 255, 0.05);
+  background-color: #eceef1;
 }

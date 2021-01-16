@@ -2,10 +2,11 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 body {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 // Components
@@ -13,3 +14,4 @@ body {
 @import "./components/player";
 @import "./components/library";
 @import "./components/library-song";
+@import "./components/nav";
