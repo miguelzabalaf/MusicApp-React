@@ -2,7 +2,7 @@ import React from 'react'
 // Components
 import { LibrarySong } from './LibrarySong'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars, faTimes} from '@fortawesome/free-solid-svg-icons';
+import { faTimes} from '@fortawesome/free-solid-svg-icons';
 import { isMobile } from '../helpers/isMobile';
 
 export const Library = ({songs, setCurrentSong, audioRef, isPlaying, currentSong, libraryStatus, setLibraryStatus, setIsPlaying}) => {

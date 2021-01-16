@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { isMobile } from '../helpers/isMobile'
 
 export const LibrarySong = ({song, songs, setCurrentSong, audioRef, isPlaying, setIsPlaying, currentSong, libraryStatus, setLibraryStatus}) => {

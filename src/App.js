@@ -52,10 +52,10 @@ const App = () => {
         isPlaying={isPlaying} 
         setIsPlaying={setIsPlaying}
         currentSong={currentSong} 
+        setCurrentSong={setCurrentSong}
         setSongInfo={setSongInfo}
         songInfo={songInfo}
         songs={songs}
-        setCurrentSong={setCurrentSong}
       />
       <Library 
         libraryStatus={libraryStatus}
@@ -66,7 +66,6 @@ const App = () => {
         setIsPlaying={setIsPlaying}
         isPlaying={isPlaying}
         setLibraryStatus={setLibraryStatus}
-        libraryStatus={libraryStatus}
       />
       <audio 
         onTimeUpdate={timeUpdateHandler} 
