@@ -122,7 +122,7 @@ export const Player = ({ audioRef, currentSong, isPlaying, setIsPlaying, setSong
       </div>
       <div className="player__play-control">
         <button className="player__play-control--skip-back" onClick={ () => skipTrackHandler('skip-back') } disabled={ playerButtons.back ? false : true }>
-          <FontAwesomeIcon size="1x" icon={faAngleLeft} size="2x" />
+          <FontAwesomeIcon size="2x" icon={faAngleLeft} />
         </button>
         <button onClick={playSongHandler} className="player__play-control--play">
           <FontAwesomeIcon size="2x" icon={isPlaying ? faPause : faPlay} />
